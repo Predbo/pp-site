@@ -13,19 +13,19 @@ function chooseFromHash(mesh) {
 	var data = {
 		text : "PP",
 		size : 20,
-		height : 5,
-		curveSegments : 20,
+		height : 2,
+		curveSegments : 12,
 		font : "optimer",
 		weight : "bold",
 		bevelEnabled : true,
-		bevelThickness : 1.5,
+		bevelThickness : 1,
 		bevelSize : 1
 	};
 
 	function generateGeometry() {
 
 		var loader = new THREE.FontLoader();
-		loader.load('/js/' + data.font + '_' + data.weight + '.typeface.js', function(font) {
+		loader.load('../js/' + data.font + '_' + data.weight + '.typeface.js', function(font) {
 
 			var geometry = new THREE.TextGeometry(data.text, {
 				font : font,
